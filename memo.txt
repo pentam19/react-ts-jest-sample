@@ -1,0 +1,14 @@
+・インストールしたパッケージ
+npm install axios
+npm install jest
+npm install msw
+
+・packege.json を以下のように書き換えるとテストケース単位で結果が出力される
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    ↓
+    "test": "react-scripts test --env=jsdom --verbose",
+    "eject": "react-scripts eject"
+  },
